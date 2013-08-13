@@ -8,8 +8,11 @@
 	  href= "https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+	<link rel=: stylsheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+	<script src="prueba.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -42,8 +45,33 @@
       /* Main body and headings */
       body{
         font-family:'Open Sans', Helvetica, Arial, sans-serif;
-		background:url('http://imgur.com/QRfBFts.png') repeat 0 0;
+		background:url('groopyfondo3.jpg') no-repeat center fixed;
+		background-size:cover;
       }
+	#img1, #img2{
+		width:100%;
+		height:100%;
+		display:none;
+		position:fixed;
+		z-index:-1;
+	}
+	#update{
+		text-align: center;
+		font-size:36px;
+		line-height: 42px;
+	}
+	#spam{
+		text-align: center;
+		font-size: 12px;
+	}
+	  #main{
+		/* background:url('dimension.png') repeat 0 0;*/
+	}
+	#sectionOne, #sectionTwo{
+		text-align: center;
+		font-size: 36px;
+		line-height: 42px;
+	}
       .heading, .subheading{
         font-family:'Ubuntu', Helvetica, Arial, sans-serif;
         text-align:center;
@@ -102,7 +130,9 @@
       }
       </style>
     </head>
-  <body>
+  <body class="bg1">
+	<img src="http://i.imgur.com/dRXUuFX.jpg" id="img1">
+	<img src="http://i.imgur.com/KrPKPMA.jpg" id="img2">
     <!-- Mobile-friendly navbar adapted from example -->
     <!-- http://twitter.github.io/bootstrap/examples/startet-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -116,9 +146,13 @@
 	  <a class="brand" href="#" style="font-family:'Audiowide', cursive;">Groopy</a>
 	  <div class="nav-collapse collapse">
 	    <ul class="nav">
-	      <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
-	      <li><a href="#about"><i class="icon-eye-open"></i> About</a></li>
-	      <li><a href="#contact"><i class="icon-envelope"></i> Contact</a></li>
+	      <li class="active"><a href="#" id="home"><i class="icon-home"></i> Home</a></li>
+	      <li><a href="#about" id="about"><i class="icon-eye-open"></i> About</a></li>
+	      <li><button type="button" class="btn btn-default navbar-btn dropdown-toggle" id="contact" data-toggle="dropdown"><i class="icon-envelope"></i> Contact <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="mailto:infogroopy@gmail.com" target="_top">Contact us at infogroopy@gmail.com!</a></li>
+			</ul>
+		  </li>
 	      </ul>
 	    </div><!--/.nav-collapse -->
 	  </div>
@@ -126,7 +160,7 @@
       </div>
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <div class="container" style="padding:30px;">
+    <div class="container" style="padding:30px;" id="main">
       <div class="row-fluid heading">
 	<div class="span12">
 	<br>
@@ -141,7 +175,7 @@
 	</div>
       <div class="row-fluid pitch">
 	<div class="span5 offset1 video">
-	  <img class="img-polaroid" src="http://i.imgur.com/V2kFVEt.png" alt="groopy header">
+	  <img class="img-polaroid" src="http://i.imgur.com/dgmWRG7.jpg" alt="groopy header">
 	  </div>
 
 	<div class="span5 actions">
@@ -197,21 +231,28 @@
 	  <img class="img-polaroid" src="http://i.imgur.com/gBtth0w.jpg" alt="Groopy header 2">
 	  </div>
 	<div class="span5 copy">
-	  <p>
-	    Groopy is a social network entirely focused around digitalizing and reliving the experience of music concerts and shows. It allows users to follow their favorite bands, track tour dates and upcoming concerts. Then buy tickets to a concert. Buying tickets earns you rewards in the form of <em>Trinkets</em> and <em>Badges</em>, exclusively designed for the band. Checking in at the concert can earn you further rewards. All these rewards can then be placed in a profile we have called <em>The Road</em>, where you record the concerts you have gone to, the <em>Trinkets</em> you have earned and the path music has taken you. You can show who is the ultimate <em>Groopy</em>.
-	    </p>
+	  <p id="sectionOne">
+			Groopy is a social network entirely focused around digitalizing and reliving the experience of music concerts and shows. </p>
 	  </div>
 	</div>
 
       <div class="row-fluid section2">
 	<div class="span5 offset1 copy copy-right">
-	  <p>
-	    Users can also check which concerts and festivals their friends have gone to, compare trinkets and get recommendations on shows, bands and albums. Groopy will be the ultimate destination for all concert-related information. Groopy is <b>not</b> designed to be a music player, but rather a discovery tool for new music, new shows and a biographical tool, where users can immortalize their concert experiences.
+	  <p id="sectionTwo">
+		Users can also check which concerts and festivals their friends have gone to, compare trinkets and get recommendations on shows, bands and albums.
 	    </p>
 	  </div>
 	<div class="span5 asset">
 	  <img class="img-polaroid" src="http://i.imgur.com/Mj1vrmx.png" alt="groopy header 3">
 	  </div>
+	</div>
+	<div class="row-fluid section3">
+		<p id="update">
+			<a href="http://groupy.launchrock.com" target="_blank">Sign up</a> for updates!
+		</p>
+		<p id="spam">
+			We dont do spam, your email is safe with us <i class="icon-ok-sign"> </i>
+		</p>
 	</div>
 
       <!--FAQ section, uses JS-->
