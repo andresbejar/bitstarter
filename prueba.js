@@ -8,8 +8,7 @@ $(document).ready(function(){
 	$("#about").click(function(){
 		$(".active").toggleClass("active");
 		$("#about").parents("li").toggleClass("active");
-		$("#img1").fadeOut("slow");
-		$("#img2").fadeIn("slow");
+		$.backstretch("http://i.imgur.com/KrPKPMA.jpg", {fade:1000});
 		sectionOne.fadeOut("slow");
 		sectionTwo.fadeOut("slow");
 		sectionOne.css('font-size', '24px');
@@ -21,8 +20,7 @@ $(document).ready(function(){
 	$("#home").click(function(){
 		$(".active").toggleClass("active");
 		$("#home").parents("li").toggleClass("active");
-		$("#img2").fadeOut("slow");
-		$("#img1").fadeIn("slow");
+		$.backstretch("http://i.imgur.com/dRXUuFX.jpg", {fade: 1000});
 		sectionOne.fadeOut("slow");
 		sectionTwo.fadeOut("slow");
 		sectionOne.css('font-size', '36px');
