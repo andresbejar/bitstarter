@@ -133,55 +133,10 @@
     <!-- AddThis Welcome BEGIN -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520172da7da58dd7"></script>
 <script type='text/javascript'>
-addthis.bar.initialize({'default':{
-"backgroundColor": "#000000",
-"buttonColor": "#098DF4",
-"textColor": "#FFFFFF",
-"buttonTextColor": "#FFFFFF"
-},rules:[
-{
-"name": "Twitter",
-"match": {
-"referringService": "twitter"
-},
-"message": "If you like Groopy, let everyone know!:",
-"action": {
-"type": "button",
-"text": "Tweet it!",
-"verb": "share",
-"service": "twitter"
-}
-},
-{
-"name": "Facebook",
-"match": {
-"referringService": "facebook"
-},
-"message": "If you like Groopy, let everyone know!:",
-"action": {
-"type": "button",
-"text": "Share on Facebook",
-"verb": "share",
-"service": "facebook"
-}
-},
-{
-"name": "Google",
-"match": {
-"referrer": "google.com"
-},
-"message": "If you like Groopy, let Google know:",
-"action": {
-"type": "button",
-"text": "+1",
-"verb": "share",
-"service": "google_plusone_share"
-}
-}
-]});
+addthis.bar.initialize({'default':{"backgroundColor":"#000000","buttonColor":"#098DF4","textColor":"#FFFFFF","buttonTextColor":"#FFFFFF"},rules:[{"name":"AnyOther","message":"If you like Groopy, let everyone know!","action":{"type":"button","text":"Share this page","verb":"share","service":"preferred"}},{"name":"Twitter","match":{"referringService":"twitter"},"message":"If you like Groopy, let everyone know!","action":{"type":"button","text":"Tweet it!","verb":"share","service":"twitter"}},{"name":"Facebook","match":{"referringService":"facebook"},"message":"If you like Groopy, let everyone know!","action":{"type":"button","text":"Share on Facebook","verb":"share","service":"facebook"}},{"name":"Google","match":{"referrer":"google.com"},"message":"If you like Groopy, let Google know:","action":{"type":"button","text":"+1","verb":"share","service":"google_plusone_share"}}]});
 </script>
 <!-- AddThis Welcome END -->
-    <div id="fb-root"></div>
+   <div id="fb-root"></div>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
