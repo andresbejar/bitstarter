@@ -8,8 +8,8 @@ $(document).ready(function(){
 	var sectionTwo = $("#sectionTwo");
 	$("#about").click(function(){
 	    $("#slogan").css('color', 'white');
-	    $("#sectionOne").closest("h3").text("For True Fans");
-	    $("#sectionTwo").closest("h3").text("Learn More");
+	    $("#sectionOne").siblings("h3").text("For True Fans");
+	    $("#sectionTwo").siblings("h3").text("Learn More");
 		$(".active").toggleClass("active");
 		$("#about").parents("li").toggleClass("active");
 		$.backstretch("http://i.imgur.com/TcrNYUU.jpg", {fade:1000});
@@ -24,8 +24,8 @@ $(document).ready(function(){
 	$("#home").click(function(e){
 	    e.preventDefault();
 	    $("#slogan").css('color', 'black');
-	    $("#sectionOne").closest("h3").text("What is Groopy?");
-	    $("#sectionTwo").closest("h3").text("What does it do?");
+	    $("#sectionOne").siblings("h3").text("What is Groopy?");
+	    $("#sectionTwo").siblings("h3").text("What does it do?");
 		$(".active").toggleClass("active");
 		$("#home").parents("li").toggleClass("active");
 		$.backstretch("http://i.imgur.com/dRXUuFX.jpg", {fade: 1000});
