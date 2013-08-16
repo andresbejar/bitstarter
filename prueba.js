@@ -12,21 +12,20 @@ $(document).ready(function(){
 		$.backstretch("http://i.imgur.com/KrPKPMA.jpg", {fade:1000});
 		sectionOne.fadeOut("slow");
 		sectionTwo.fadeOut("slow");
-		sectionOne.css('font-size', '24px');
 		sectionOne.html(aboutSectionOne);
 		sectionTwo.html(aboutSectionTwo);
 		sectionOne.fadeIn("slow");
 		sectionTwo.fadeIn("slow");
 	    $(".marketing-hidden").slideDown("slow");
 	});
-	$("#home").click(function(){
+	$("#home").click(function(e){
+	    e.preventDefault();
 		$(".active").toggleClass("active");
 		$("#home").parents("li").toggleClass("active");
 		$.backstretch("http://i.imgur.com/dRXUuFX.jpg", {fade: 1000});
 		sectionOne.fadeOut("slow");
 		sectionTwo.fadeOut("slow");
 	    $(".marketing-hidden").slideUp("slow");
-		sectionOne.css('font-size', '36px');
 		sectionOne.html(homeSectionOne);
 		sectionTwo.html(homeSectionTwo);
 		sectionOne.fadeIn("slow");
