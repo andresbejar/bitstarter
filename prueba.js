@@ -13,7 +13,7 @@ $(document).ready(function(){
 	    $("#stats").slideUp("slow");
 	    	$(".active").toggleClass("active");
 		$("#about").parents("li").toggleClass("active");
-		$.backstretch("http://i.imgur.com/TcrNYUU.jpg", {fade:1000});
+		$.backstretch("http://i.imgur.com/KrPKPMA.jpg", {fade:1000});
 		sectionOne.fadeOut("slow");
 		sectionTwo.fadeOut("slow");
 		sectionOne.html(aboutSectionOne);
